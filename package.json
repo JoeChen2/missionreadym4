@@ -1,0 +1,16 @@
+{
+  "name": "turner-car-html-search",
+  "version": "1.0.0",
+  "description": "mission 4",
+  "main": "main.js",
+  "scripts": {
+    "test": "jest --env=jsdom"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^27.5.1"
+  },
+  "type": "module"
+}

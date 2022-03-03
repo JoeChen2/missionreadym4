@@ -17,6 +17,8 @@ function remove_punc(astring) {
     return astring.join("")
 }
 
+exports.remove_punc = remove_punc
+
 let searchTerm = null
 const subscriptionKey = "6a3f3d6efb6242eabcbc1e1e4fcbeedc"
 const customConfigId = "9781a285-0170-46be-8868-1405346b8833"
@@ -27,6 +29,7 @@ let searchoffset = 0
 
 const searchresultlist = document.querySelector("#searchresult")
 
+if(submitbutton){//this ugly if statement is used to prevent jest from throwing a null error while unit testing (jest has issue with DOM code)
 submitbutton.addEventListener("click", function() {
     searchTerm = remove_punc(searchbar.value)
     searchoffset=0
@@ -140,3 +143,4 @@ prevbtn.addEventListener("click",function () {
         })
     }
 })
+}
